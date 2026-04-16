@@ -88,7 +88,7 @@ form button:hover {
   text-decoration: line-through;
   color: #888;
 }
-
+/* PRECIO FINAL Y DESCUENTO */
 .product-card p.final-price {
   font-size: 18px;
   font-weight: bold;
