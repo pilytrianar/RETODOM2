@@ -37,10 +37,22 @@ formularioProducto.addEventListener("submit", function (event) {
            <p class="discount-text">Descuento aplicado: 50%</p>`
         : `<p class="final-price">Precio: $${precioFinal.toLocaleString()}</p>`
     }
+    <button class="edit-btn">Editar</button>
     <button class="delete-btn">Eliminar</button>
   `;
 
+  const editButton = productCard.querySelector(".edit-btn");
   const deleteButton = productCard.querySelector(".delete-btn");
+
+  editButton.addEventListener("click", function () {
+    document.getElementById("image").value = image;
+    document.getElementById("title").value = title;
+    document.getElementById("description").value = description;
+    document.getElementById("price").value = price;
+    document.getElementById("coupon").value = coupon;
+
+    productCard.remove();
+  });
 
   deleteButton.addEventListener("click", function () {
     productCard.remove();
