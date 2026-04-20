@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Productos</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Productos</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
-        <h1 class="titulo-principal">Gestión de Productos</h1>
-    </header>
+  <header>
+    <h1 class="titulo-principal">Gestión de Productos</h1>
 
-    <main>
+    <nav class="acciones-nav">
+      <button id="btn-show-login">Login Administrador</button>
+      <button id="btn-logout" class="hidden">Cerrar sesión</button>
+    </nav>
+  </header>
 
-        <!-- FORMULARIO DE AGREGAR PRODUCTO -->
-        <section>
-            <h2 class="titulo-seccion">Agregar producto</h2>
+  <main>
 
-            <form id="product-form">
-                <input type="text" id="image" placeholder="URL de la imagen" required>
-                <input type="text" id="title" placeholder="Nombre del producto" required>
-                <input type="text" id="description" placeholder="Descripción" required>
-                <input type="number" id="price" placeholder="Precio" required>
-                <input type="text" id="coupon" placeholder="Cupón (ej: DESC50)">
-                
-                <button type="submit">Guardar</button>
-            </form>
-        </section>
+    <section id="login-section" class="hidden">
+      <div class="login-card">
+        <h2 class="titulo-seccion">Acceso administrador</h2>
+        <input type="text" id="user-input" placeholder="Usuario">
+        <input type="password" id="pass-input" placeholder="Contraseña">
+        <button id="btn-login">Ingresar</button>
+        <p id="login-error" class="error hidden">Credenciales incorrectas</p>
+      </div>
+    </section>
 
-        <!-- SECCIÓN DE PRODUCTOS -->
-        <section>
-            <h2 class="titulo-seccion">Productos</h2>
-            <div id="products-container"></div>
-        </section>
+    <section id="admin-section" class="hidden">
+      <h2 class="titulo-seccion">Agregar producto</h2>
 
-    </main>
+      <form id="product-form">
+        <input type="text" id="image" placeholder="URL de la imagen" required>
+        <input type="text" id="title" placeholder="Nombre del producto" required>
+        <input type="text" id="description" placeholder="Descripción" required>
+        <input type="number" id="price" placeholder="Precio" required>
+        <input type="text" id="coupon" placeholder="Cupón (ej: DESC50)">
+        <button type="submit">Guardar</button>
+      </form>
+    </section>
 
-    <script src="script.js"></script>
+    <section>
+      <h2 class="titulo-seccion">Productos</h2>
+      <div id="products-container"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

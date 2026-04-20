@@ -1,4 +1,6 @@
+/* ===================== */
 /* GENERAL */
+/* ===================== */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -6,22 +8,89 @@ body {
   padding: 20px;
 }
 
+/* ===================== */
 /* TITULOS */
+/* ===================== */
 h1, h2 {
   text-align: center;
 }
 
 .titulo-principal {
-  text-align: center;
   color: #0b3d91;
+  margin-bottom: 10px;
 }
 
 .titulo-seccion {
-  text-align: center;
   color: #1a7f37;
+  margin-bottom: 15px;
 }
 
+/* ===================== */
+/* NAV LOGIN */
+/* ===================== */
+.acciones-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* ===================== */
+/* BOTONES GENERALES */
+/* ===================== */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* LOGIN / LOGOUT */
+#btn-show-login,
+#btn-logout,
+#btn-login {
+  background-color: #0275d8;
+  color: white;
+}
+
+#btn-show-login:hover,
+#btn-logout:hover,
+#btn-login:hover {
+  background-color: #025aa5;
+}
+
+/* ===================== */
+/* LOGIN CARD */
+/* ===================== */
+.login-card {
+  max-width: 400px;
+  margin: 0 auto 25px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-card input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* ERROR LOGIN */
+.error {
+  color: #d9534f;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ===================== */
 /* FORMULARIO */
+/* ===================== */
 form {
   display: flex;
   flex-wrap: wrap;
@@ -38,32 +107,37 @@ form input {
 }
 
 form button {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 6px;
   background-color: #0275d8;
   color: white;
-  cursor: pointer;
 }
 
 form button:hover {
   background-color: #025aa5;
 }
 
-/* CONTENEDOR DE PRODUCTOS */
+/* ===================== */
+/* CONTENEDOR PRODUCTOS */
+/* ===================== */
 #products-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
 
+/* ===================== */
 /* TARJETA */
+/* ===================== */
 .product-card {
   background: white;
   border-radius: 10px;
   padding: 15px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   text-align: center;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
 }
 
 /* IMAGEN */
@@ -74,6 +148,7 @@ form button:hover {
   border-radius: 8px;
 }
 
+/* TEXTO */
 .product-card h3 {
   margin: 12px 0 8px;
   font-size: 20px;
@@ -84,11 +159,14 @@ form button:hover {
   color: #333;
 }
 
+/* ===================== */
+/* PRECIOS */
+/* ===================== */
 .original-price {
   text-decoration: line-through;
   color: #888;
 }
-/* PRECIO FINAL Y DESCUENTO */
+
 .product-card p.final-price {
   font-size: 18px;
   font-weight: bold;
@@ -100,14 +178,14 @@ form button:hover {
   font-weight: bold;
 }
 
-/* BOTÓN EDITAR */
+/* ===================== */
+/* BOTONES TARJETA */
+/* ===================== */
+
+/* EDITAR */
 .edit-btn {
-  padding: 10px 14px;
-  border: none;
-  border-radius: 6px;
   background-color: #f0ad4e;
   color: white;
-  cursor: pointer;
   margin-right: 5px;
 }
 
@@ -115,17 +193,20 @@ form button:hover {
   background-color: #ec971f;
 }
 
-/* BOTÓN ELIMINAR */
+/* ELIMINAR */
 .delete-btn {
-  padding: 10px 14px;
-  border: none;
-  border-radius: 6px;
   background-color: #d9534f;
   color: white;
-  cursor: pointer;
 }
 
 .delete-btn:hover {
   background-color: #b52b27;
+}
+
+/* ===================== */
+/* UTILIDADES */
+/* ===================== */
+.hidden {
+  display: none;
 }
 
