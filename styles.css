@@ -3,9 +3,10 @@
 /* ===================== */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background: linear-gradient(180deg, #ede9fe 0%, #f8f7ff 100%);
   margin: 0;
   padding: 20px;
+  color: #2f2a3a;
 }
 
 /* ===================== */
@@ -16,12 +17,13 @@ h1, h2 {
 }
 
 .titulo-principal {
-  color: #0b3d91;
+  color: #6d28d9;
   margin-bottom: 10px;
+  font-size: 42px;
 }
 
 .titulo-seccion {
-  color: #1a7f37;
+  color: #7c3aed;
   margin-bottom: 15px;
 }
 
@@ -41,49 +43,55 @@ h1, h2 {
 button {
   padding: 10px 15px;
   border: none;
-  border-radius: 6px;
+  border-radius: 12px;
   cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: bold;
 }
 
 /* LOGIN / LOGOUT */
 #btn-show-login,
 #btn-logout,
 #btn-login {
-  background-color: #0275d8;
+  background-color: #8b5cf6;
   color: white;
 }
 
 #btn-show-login:hover,
 #btn-logout:hover,
 #btn-login:hover {
-  background-color: #025aa5;
+  background-color: #7c3aed;
+  transform: translateY(-2px);
 }
 
 /* ===================== */
 /* LOGIN CARD */
 /* ===================== */
 .login-card {
-  max-width: 400px;
+  max-width: 420px;
   margin: 0 auto 25px;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.85);
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(109, 40, 217, 0.12);
   text-align: center;
+  backdrop-filter: blur(6px);
 }
 
 .login-card input {
   display: block;
   width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #d8ccff;
+  background-color: #faf9ff;
+  box-sizing: border-box;
 }
 
 /* ERROR LOGIN */
 .error {
-  color: #d9534f;
+  color: #dc2626;
   font-weight: bold;
   margin-top: 10px;
 }
@@ -95,24 +103,26 @@ form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 20px;
 }
 
 form input {
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  width: 200px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #d8ccff;
+  width: 220px;
+  background-color: #faf9ff;
 }
 
 form button {
-  background-color: #0275d8;
+  background-color: #8b5cf6;
   color: white;
 }
 
 form button:hover {
-  background-color: #025aa5;
+  background-color: #7c3aed;
+  transform: translateY(-2px);
 }
 
 /* ===================== */
@@ -120,7 +130,7 @@ form button:hover {
 /* ===================== */
 #products-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 20px;
 }
 
@@ -128,35 +138,38 @@ form button:hover {
 /* TARJETA */
 /* ===================== */
 .product-card {
-  background: white;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 10px 25px rgba(109, 40, 217, 0.10);
   text-align: center;
-  transition: 0.3s;
+  transition: 0.3s ease;
+  border: 1px solid #ebe5ff;
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
 
 /* IMAGEN */
 .product-card img {
   width: 100%;
-  height: 180px;
+  height: 190px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 14px;
 }
 
 /* TEXTO */
 .product-card h3 {
-  margin: 12px 0 8px;
-  font-size: 20px;
+  margin: 14px 0 8px;
+  font-size: 22px;
+  color: #5b21b6;
 }
 
 .product-card p {
   margin: 6px 0;
-  color: #333;
+  color: #4b5563;
+  line-height: 1.4;
 }
 
 /* ===================== */
@@ -164,17 +177,17 @@ form button:hover {
 /* ===================== */
 .original-price {
   text-decoration: line-through;
-  color: #888;
+  color: #9ca3af;
 }
 
 .product-card p.final-price {
   font-size: 18px;
   font-weight: bold;
-  color: #1a7f37;
+  color: #15803d;
 }
 
 .product-card p.discount-text {
-  color: #d9534f;
+  color: #16a34a;
   font-weight: bold;
 }
 
@@ -184,23 +197,23 @@ form button:hover {
 
 /* EDITAR */
 .edit-btn {
-  background-color: #f0ad4e;
+  background-color: #c084fc;
   color: white;
   margin-right: 5px;
 }
 
 .edit-btn:hover {
-  background-color: #ec971f;
+  background-color: #a855f7;
 }
 
 /* ELIMINAR */
 .delete-btn {
-  background-color: #d9534f;
+  background-color: #ef4444;
   color: white;
 }
 
 .delete-btn:hover {
-  background-color: #b52b27;
+  background-color: #dc2626;
 }
 
 /* ===================== */
@@ -209,4 +222,3 @@ form button:hover {
 .hidden {
   display: none;
 }
-
